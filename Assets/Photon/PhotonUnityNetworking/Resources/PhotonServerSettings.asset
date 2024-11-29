@@ -48,6 +48,8 @@ MonoBehaviour:
   - RPC_PositionShips
   - RPC_PositionShipsForPlayer1
   - RPC_PositionShipsForPlayer2
+  - NotifyAllShipsPlaced
+  - ReceiveAttack
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
