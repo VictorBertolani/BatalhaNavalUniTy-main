@@ -202,15 +202,25 @@ public class BoardManager : MonoBehaviourPunCallbacks
             // O Host verá o tabuleiro do Player 2
             foreach (Transform child in opponentBoardPanel2)
             {
+                child.gameObject.SetActive(!isVisible);
+            }
+
+            foreach (Transform child in opponentBoardPanel1)
+            {
                 child.gameObject.SetActive(isVisible);
             }
         }
         else
         {
             // O Client verá o tabuleiro do Player 1
-            foreach (Transform child in opponentBoardPanel1)
+            foreach (Transform child in opponentBoardPanel2)
             {
                 child.gameObject.SetActive(isVisible);
+            }
+
+            foreach (Transform child in opponentBoardPanel1)
+            {
+                child.gameObject.SetActive(!isVisible);
             }
         }
     }
