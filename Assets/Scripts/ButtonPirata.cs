@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Photon.Pun;
 
 public class ButtonPirata : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
@@ -87,6 +88,7 @@ public class ButtonPirata : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         PlayerPrefs.SetInt("IndexPersonagem", 1);
         PlayerPrefs.Save();  // Salva o valor para que possa ser usado em outra cena
         Debug.Log("IndexPersonagem alterado para: " + PlayerPrefs.GetInt("IndexPersonagem"));
+        PhotonNetwork.LoadLevel("Game");
     }
 
     // Função para esconder todos os outros botões

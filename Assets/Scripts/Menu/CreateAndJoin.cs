@@ -38,7 +38,7 @@ public class CreateAndJoin : MonoBehaviourPunCallbacks
     {
         
         print(PhotonNetwork.CountOfPlayersInRooms);
-        PhotonNetwork.LoadLevel("Game");
+        PhotonNetwork.LoadLevel("EscolhaDePersonagens");
     }
 
 }

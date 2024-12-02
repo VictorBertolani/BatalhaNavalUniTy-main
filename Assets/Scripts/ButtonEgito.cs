@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Photon.Pun;
 
 public class ButtonEgito : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
@@ -72,6 +73,7 @@ public class ButtonEgito : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         PlayerPrefs.SetInt("IndexPersonagem", 2);
         PlayerPrefs.Save();  // Salva o valor para que possa ser usado em outra cena
         Debug.Log("IndexPersonagem alterado para: " + PlayerPrefs.GetInt("IndexPersonagem"));
+        PhotonNetwork.LoadLevel("Game");
     }
 
     private void ToggleOtherButtonsVisibility()
